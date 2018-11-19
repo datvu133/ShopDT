@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    width: auto;
+    height: auto;
+    border: 0px solid #000;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    height: 250px;
+    border: 0px solid #000;
+
+}
+.menu{
+    width: 100%;
+    height: 40px;
+    border: 0px solid #003;
+    background:#000000;
+    margin-top: -1px;
+    font-size: 20px;
+}
+.menu ul{
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    border-radius: 5px;
+}
+.menu ul li{
+    width: auto;
+    float: left;
+    line-height: 40px;
+    margin-left: 40px;
+    border-radius: 5px;
+}
+.menu ul li a{
+    color: blue;
+    text-decoration: none;
+    display: block;
+ }
+ .menu a:hover{
+     text-decoration: underline;
+     background-color: #555;
+     color: white;
+ }
+.content{
+    width: auto;
+    height: auto;
+    border: 0px solid #000;
+    border-radius: 8px 8px 8px 8px;
+    margin-top: 4px;
+
+}
+.left {
+	width: 200px;
+    border-radius: 8px 8px 8px 8px;
+    height: auto;
+    border: 1px solid #000;
+    float: left;
+}
+.danhsachsanpham{
+    width: auto;
+    height: auto;
+}
+
+.danhsachsanpham ul{
+    width: auto;
+    height: auto;
+    list-style: none;
+    background: burlywood;
+  
+}
+.danhsachsanpham ul li{
+    width: auto;
+    margin-left: 20px;
+    margin: 10px;
+    margin-top: 10px;
+   height: 40px;
+   border: 0.5px;
+   border-bottom-style: dotted;
+}
+.danhsachsanpham ul li a{
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+.danhsachsanpham a{
+    text-decoration: none;
+    color: blue;
+    display: block;
+   
+}
+.danhsachsanpham a:hover{
+    text-decoration: underline;
+}
+.right{
+    width:83%;
+    float: right;
+    margin-left: 10px;
+}
+.trangchu{
+    width: 100%;
+    margin-left: 10px;
+}
+.sanpham
+{
+    width: 100%;
+    height: 300px;
+} 
+
+.sanpham ul{
+    width: 100%;
+    list-style: none;
+    position: relative;
+    float: left;
+ 
+}
+.sanpham ul li{
+    width: 300px;
+    text-align: center;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    
+}
+.sanpham ul li a{
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+.fooder{
+    width: 100%;
+    height: 80px;
+    border: 1px solid #000;
+}
