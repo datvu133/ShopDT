@@ -1,13 +1,14 @@
 <?php
     $tenmaychu='localhost:3306';
-    $csdl='shopdtgd';
+    $csdl='shopdt';
     $pass='';
     $tentaiklhoan='root';
     $con=mysqli_connect($tenmaychu,$tentaiklhoan,$pass,$csdl);
+    mysqli_set_charset($con, 'UTF8');
     $sql="select * from loaisanpham ";
     $run= mysqli_query($con,$sql);
 ?>
-<table width="100%" border="1">
+<table width="1000px" border="1">
      <tr>
          <td>STT</td>
          <td>Tên loại sản phẩm</td>

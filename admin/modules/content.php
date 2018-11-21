@@ -14,6 +14,10 @@
           {
               include('modules/quanlyhangsanxuat/main.php');
           }
+          if($tam=='quanlychitietsanpham')
+          {
+              include('modules/quanlychitietsanpham/main.php');
+          }
 
           ?>
 </div>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style/css.css">
-    <link rel="stylesheet" href="OwlCarousel/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="OwlCarousel/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"rel="stylesheet" type="text/css">
     <title>Điện Tử Gia Dụng</title>
 </head >
 <body>
@@ -19,8 +19,8 @@
     include('modules/fooder.php');
     ?>
     </div>
-    <script type="text/javascript " src="OwlCarousel/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
-    <script type="text/javascript " src="OwlCarousel/OwlCarousel2-2.3.4/dist/owl.carousel.js" ></script>
+    <script type="text/javascript " src="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script type="text/javascript " src="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.js" ></script>
     <script type="text/javascript">
     $('.owl-carousel').owlCarousel({
     rtl:true,

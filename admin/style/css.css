@@ -2,14 +2,19 @@
     padding: 0;
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 table{
     border-collapse: collapse;
+    text-align: center;
 }
 table td{
-    text-align:center;
+    width: auto;
+    height: auto;
 }
 .wrapper{
-    width: 1000px;
+    width: auto;
     height: auto;
     border: 1px solid #000;
     margin: auto;
@@ -53,23 +58,25 @@ table td{
  }
 .content{
     width: auto;
-    height: 400px;
+    height: auto;
     border: 0.5px solid #000;
     border-radius: 8px 8px 8px 8px;
     margin-top: 4px;
 
 }
 .left{
-    width: 300px;
-    height: 400px;
+    width: auto;
+    height: auto;
     border:1px solid #000;
     float: left;
 }
 .right{
-    width: 690px;
-    height: 400px;
+    width: auto;
+    height: auto;
     border: 1px solid #000;
-    float: right;
+    float: left;
+    margin-left: 20px;
+    border-collapse: collapse;
 }
 .clear{
     clear: both;

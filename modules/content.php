@@ -5,8 +5,8 @@
         {
             $tam=$_GET['xem'];
         }else
-        $tam=' ';
-        if($tam==' ')
+        $tam='';
+        if($tam=='')
         {
             include('modules/sanphamtrangchu.php');
         }
@@ -37,15 +37,24 @@
             $tam='';
             if($tam=='sanpham')
             {
+                if(isset($_POST['search']))
+                 {
+                include('modules/right/search.php');
+                 }else{
                 include('modules/right/tatcasanpham.php');
+                 }
             }else if($tam=='chitietsanpham' )
             {
                 include('modules/right/chitietsanpham.php');
-                include('modules/right/sanphamcungloai.php');
+                
             }else if($tam=='chitietloaisanpham')
             {
                 include('modules/right/chitietloaisanpham.php');
+            }else if($tam=='chitiethangsanxuat')
+            {
+                include('modules/right/chitiethangsanxuat.php');
             }
+
             
             ?>
             </div>

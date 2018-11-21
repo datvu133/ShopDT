@@ -1,224 +1,71 @@
+<?php
+    $sql_spm="select * from sanpham order by NGAYNHAP desc limit 0,10";
+    $query_spm=mysqli_query($con,$sql_spm);
+    $sql_spmn="select * from sanpham order by SOLUONGBAN desc limit 0,10";
+    $query_spmn=mysqli_query($con,$sql_spmn);
+    $sql_spx="select * from sanpham order by SOLUONGXEM desc limit 0,10";
+    $query_spx=mysqli_query($con,$sql_spx);
+?>
 <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 5px;">Sản phẩm mới</p>
             <div class="sanpham"  >
                 <ul class="owl-carousel owl-theme">
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
+                <?php
+             
+             while($dong_spm=mysqli_fetch_array($query_spm)){
+                ?>
+            <li><a href="index.php?xem=chitietsanpham&idloaisp=<?php echo $dong_spm['MALOAISANPHAM'] ?>&idhangsx=<?php echo $dong_spm['MAHANGSANXUAT'] ?>&id= <?php echo $dong_spm['MASANPHAM'] ?>">
+                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spm['HINHURL'] ?>" alt="" width="150" height="150">
+                    <P><?php echo $dong_spm['TENSANPHAM'] ?></P>
+                    <P>Giá: <?php echo $dong_spm['GIASANPHAM'] ?> đ</P>
+                    <P>Chi tiết sản phẩm</P>
 
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
+                </a></li>
+                <?php
+              
+                }
+                ?>
                 </ul>
             </div>
+            <hr>
             <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 5px;">Sản phẩm mua nhiều</p>
             <div class="sanpham" >
+               
                 <ul class="owl-carousel owl-theme">
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
+                <?php
+             
+             while($dong_spmn=mysqli_fetch_array($query_spmn)){
+                ?>
+            <li><a href="index.php?xem=chitietsanpham&idloaisp=<?php echo $dong_spmn['MALOAISANPHAM'] ?>&idhangsx=<?php echo $dong_spmn['MAHANGSANXUAT'] ?>&id= <?php echo $dong_spmn['MASANPHAM'] ?>">
+                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spmn['HINHURL'] ?>" alt="" width="150" height="150">
+                    <P><?php echo $dong_spmn['TENSANPHAM'] ?></P>
+                    <P>Giá: <?php echo $dong_spmn['GIASANPHAM'] ?> đ</P>
+                    <P>Chi tiết sản phẩm</P>
 
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
+                </a></li>
+                <?php
+              
+                }
+                ?>
                 </ul>
             </div>
+            <hr>
             <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Sản phẩm xem nhiều</p>
             <div class="sanpham"  >
                 <ul class="owl-carousel owl-theme">
-                <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
+                <?php
+             
+             while($dong_spx=mysqli_fetch_array($query_spx)){
+                ?>
+            <li><a href="index.php?xem=chitietsanpham&idloaisp=<?php echo $dong_spx['MALOAISANPHAM'] ?>&idhangsx=<?php echo $dong_spx['MAHANGSANXUAT'] ?>&id= <?php echo $dong_spx['MASANPHAM'] ?>">
+                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spx['HINHURL'] ?>" alt="" width="150" height="150">
+                    <P><?php echo $dong_spx['TENSANPHAM'] ?></P>
+                    <P>Giá: <?php echo $dong_spx['GIASANPHAM'] ?> đ</P>
+                    <P>Chi tiết sản phẩm</P>
 
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
-                    <li><a href="index.php?xem=chitietsanpham">
-                        <img src="imags/vi-vn-1.jpg" alt="" width="150" height="auto">
-                        <P>Android Tivi Sony 4K 43 inch KD-43X7500F</P>
-                        <P>Giá:14.500.000₫</P>
-                        <P>Chi tiết sản phẩm</P>
-
-                    </a></li>
+                </a></li>
+                <?php
+              
+                }
+                ?>
                 </ul>
+            </div>

@@ -1,10 +1,11 @@
 <?php
     $tenmaychu='localhost:3306';
-    $csdl='shopdtgd';
+    $csdl='shopdt';
     $pass='';
     $tentaiklhoan='root';
     $con=mysqli_connect($tenmaychu,$tentaiklhoan,$pass,$csdl);
-    $id=$_POST['id'];
+    mysqli_set_charset($con, 'UTF8');
+    $id=$_GET['id'];
     $tenloaisp=$_POST['tenloaisp'];
     if(isset($_POST['them']))
     {

@@ -1,11 +1,6 @@
 <?php
-    $tenmaychu='localhost:3306';
-    $csdl='shopdtgd';
-    $pass='';
-    $tentaiklhoan='root';
-    $con=mysqli_connect($tenmaychu,$tentaiklhoan,$pass,$csdl);
     $sql="select * from loaisanpham where MALOAISANPHAM=$_GET[id]";
-    $run= mysqli_query($con,$sql);
+    $run=mysqli_query($con,$sql);
     $dong=mysqli_fetch_array($run);
 ?>
 <form action="modules/quanlyloaisanpham/xuly.php?id=<?php echo $dong['MALOAISANPHAM'] ?>" method="post" enctype="multipart/form-data">

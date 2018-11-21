@@ -8,6 +8,12 @@
     <title>Quản lí shop</title>
 </head>
 <body>
+    <?php
+    session_start();
+    if(!isset($_SESSION['dangnhap'])){
+        header('location:login.php');
+    }
+    ?>
     <div class ="wrapper">
     <?php
     include('modules/config.php');
