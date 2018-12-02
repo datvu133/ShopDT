@@ -17,7 +17,7 @@
 
     if(isset($_POST['them']))
     {
-        $sql="insert into sanpham (MAHANGSANXUAT,MALOAISANPHAM,TENSANPHAM,HINHURL,GIASANPHAM,MOTA) VALUES ($idhang,$idloai,'$tensp','$hinhanh',$gia,'$mota')";
+        $sql="insert into sanpham (MAHANGSANXUAT,MALOAISANPHAM,TENSANPHAM,HINHURL,NGAYNHAP,GIASANPHAM,MOTA) VALUES ($idhang,$idloai,'$tensp','$hinhanh',CURRENT_TIMESTAMP(),$gia,'$mota')";
         mysqli_query($con,$sql);
        header('location:../../index.php?quanly=quanlychitietsanpham&ac=them');
     }

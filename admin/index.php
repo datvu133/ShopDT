@@ -20,7 +20,7 @@
     include('modules/header.php');
     include('modules/menu.php');
     include('modules/content.php');
-    include('modules/fooder.php');
+    //include('modules/fooder.php');
     ?>
         
        

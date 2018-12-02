@@ -46,7 +46,7 @@
      
 </table>
 <div>
-<button > <a  href="?quanly=quanlychitietsanpham&ac=them&trang=1 "> < </a></button>
+<button > <a  href="?quanly=quanlychitietsanpham&ac=them&trang=1 "> << </a></button>
 <?php
 
 if($get_trang>1){
@@ -55,7 +55,7 @@ if($get_trang>1){
 <?php
 }else {
     ?>
-     <button disabled="disabled"> <</button>
+     <button disabled="disabled"> < </button>
     <?php
 }
 ?>
@@ -79,5 +79,5 @@ if($get_trang<$a){
     <?php
 }
 ?> 
-    <button > <a  href="?quanly=quanlychitietsanpham&ac=them&trang=<?php echo $a ?> "> > </a></button>
+    <button > <a  href="?quanly=quanlychitietsanpham&ac=them&trang=<?php echo $a ?> "> >> </a></button>
 </div>

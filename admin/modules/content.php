@@ -9,14 +9,15 @@
           if($tam=='quanlyloaisanpham')
           {
               include('modules/quanlyloaisanpham/main.php');
-          }
-          if($tam=='quanlyhangsanxuat')
+          }elseif($tam=='quanlyhangsanxuat')
           {
               include('modules/quanlyhangsanxuat/main.php');
-          }
-          if($tam=='quanlychitietsanpham')
+          }elseif($tam=='quanlychitietsanpham')
           {
               include('modules/quanlychitietsanpham/main.php');
+          }elseif($tam=='quanlydonhang')
+          {
+              include('modules/quanlydonhang/main.php');
           }
 
           ?>
