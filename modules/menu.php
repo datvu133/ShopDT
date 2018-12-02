@@ -1,10 +1,9 @@
-<div class="menu">
+﻿<div class="menu">
             <ul>
-                <li><a href="index.php">Trang Chủ</a></li>
-                <li><a href="index.php?xem=sanpham&trang=1">Sản Phẩm</a></li>
-                <li><a href="#">Đăng nhập</a></li>
-                <li><a href="#">Đăng ký</a></li>
-                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="index.php" class="hvr-forward">Trang Chủ</a></li>
+                <li><a href="index.php?xem=sanpham&trang=1" class="hvr-forward">Sản Phẩm</a></li>
+                <li><a href="index.php?xem=dangnhap" class="hvr-forward">Đăng nhập</a></li>
+                <li><a href="index.php?xem=giohang" class="hvr-forward">Giỏ hàng</a></li>
                <form action="index.php?xem=sanpham" method="post" enctype="multipart/form-data">
                 <div class="search">
                         <input type="text" id="searchtext" name="searchtext" size="40"/>
@@ -13,3 +12,4 @@
                 </form>
             </ul>
         </div>
+        

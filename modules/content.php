@@ -19,7 +19,7 @@
                 $tam=$_GET['xem'];
             }else
             $tam='';
-            if($tam!='trangchu'&$tam!='')
+            if($tam!='trangchu'&$tam!=''&$tam!='dangnhap'&$tam!='giohang'&$tam!='dangky')
             {
                 include('modules/left/danhsachsanpham.php');
             }
@@ -53,7 +53,20 @@
             }else if($tam=='chitiethangsanxuat')
             {
                 include('modules/right/chitiethangsanxuat.php');
+            }else if($tam=='giohang')
+            {
+                include('modules/right/giohang.php');
+            }else if($tam=='thanhtoan')
+            {
+                include('modules/right/thanhtoan.php');
+            }else if($tam=='dangnhap')
+            {
+                include('modules/right/dangnhap.php');
+            }else if($tam=='dangky')
+            {
+                include('modules/right/dangky.php');
             }
+
 
             
             ?>

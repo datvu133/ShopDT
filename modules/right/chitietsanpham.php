@@ -1,6 +1,6 @@
 <?php
          $id=$_GET['id'];
-        $sql="select * from sanpham where MASANPHAM=$_GET[id]";
+        $sql="select * from sanpham sp JOIN loaisanpham lsp on sp.MALOAISANPHAM=lsp.MALOAISANPHAM JOIN hangsanxuat hsx on sp.MAHANGSANXUAT=hsx.MAHANGSANXUAT where MASANPHAM=$_GET[id]";
         $query=mysqli_query($con,$sql);
         $dong=mysqli_fetch_array($query);
         $sql_lsp="select * from sanpham where MALOAISANPHAM=$_GET[idloaisp] and MASANPHAM<>$_GET[id] limit 0,5";
@@ -12,25 +12,40 @@
         $sql_up="update sanpham set SOLUONGXEM='$dem' where MASANPHAM='$id'";
         mysqli_query($con,$sql_up);
 ?>
-<table width="700" stype="border-collapse:collapse">
+<p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Chi Tiết Sản Phẩm </p>
+<table width="750" stype="border-collapse:collapse">
     <tr>
-        <td colspan="2"><div algin="center">Chi tiết sản phẩm</div></td>
+        <td colspan="2"></td>
        
     </tr>
     <tr>
-        <td rowspan="2"><img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong['HINHURL'] ?>" width="200" height="200"></td>
+        <td rowspan="4"><img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong['HINHURL'] ?>" width="200" height="200"></td>
         <td  ><?php echo $dong['TENSANPHAM']?></td>
     </tr>
     <tr>
+    <td>Loại sản phầm:<?php echo $dong['TENLOAISANPHAM']?></td>
+    </tr>
+    <tr>
+    <td>Hãng sản xuất:<?php echo $dong['TENHANGSANXUAT']?></td>
+    </tr>
+    <tr>
+    
         <td style="color:red ;width:200">Giá:<?php echo ''. $dong['GIASANPHAM']?>VNĐ</td>
+ 
+    </tr>
+    <tr>
+    <td> <img src="imags/eye.png" alt="">:<?php echo $dem ?>
+    <img src="imags/gio.jpg" alt="" width="30" height="30"> :<?php echo $dong['SOLUONGBAN']?></td>
+    <td colspan="4">
+    <a href="index.php?xem=giohang&add=<?php echo $dong['MASANPHAM']?>"><button class ="button"> Thêm vào giỏ hàng </button></a>
+    </td>
+    </tr>
+    <tr>
+        <td colspan="2">Thông số kỹ thuật: </td>
         
     </tr>
     <tr>
-        <td colspan="2">Thông số kỹ thuật </td>
-        
-    </tr>
-    <tr>
-        <td colspam="2"> <?php echo $dong['MOTA']?></td>
+        <td colspam="2" style="width:200" > <?php echo $dong['MOTA']?></td>
         
     </tr>
     

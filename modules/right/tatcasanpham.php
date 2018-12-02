@@ -33,7 +33,7 @@
     <hr>
     <div style="text-align:center;">
         <button>
-            <a href="?xem=sanpham&trang=1 "> < </a>
+            <a href="?xem=sanpham&trang=1 "> << </a>
         </button>
     <?php
         if($get_trang>1){
@@ -69,5 +69,5 @@
     <?php
                 }
     ?>
-                 <button> <a href="?xem=sanpham&trang=<?php echo $a ?> "> > </a></button>
+                 <button> <a href="?xem=sanpham&trang=<?php echo $a ?> "> >> </a></button>
     </div>

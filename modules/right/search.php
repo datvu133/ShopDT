@@ -14,13 +14,14 @@
           }
       }
 ?>
-<p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Sản phẩm tìm thấy</p>
+<p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 8px; margin-right:10px">Sản phẩm tìm thấy</p>
             <div class="sanpham"  >
                 <?php
                 if($cout==0){
-                ?>
-                <p>Không tìm thấy sản phẩm nào</p>
-                <?php
+            
+               echo " Không tìm thấy sản phẩm nào";
+                
+            
                 }else {
                 ?>
                 <ul >

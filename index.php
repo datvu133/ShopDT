@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_GET['ac']) && $_GET['ac']=='dangxuat' ){
+        unset($_SESSION['username']);
+       
+    } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

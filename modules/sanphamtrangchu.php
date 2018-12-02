@@ -56,8 +56,9 @@
              
              while($dong_spx=mysqli_fetch_array($query_spx)){
                 ?>
+                
             <li><a href="index.php?xem=chitietsanpham&idloaisp=<?php echo $dong_spx['MALOAISANPHAM'] ?>&idhangsx=<?php echo $dong_spx['MAHANGSANXUAT'] ?>&id= <?php echo $dong_spx['MASANPHAM'] ?>">
-                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spx['HINHURL'] ?>" alt="" width="150" height="150">
+                    <img id='status' src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spx['HINHURL'] ?>" alt="" width="150" height="150">
                     <P><?php echo $dong_spx['TENSANPHAM'] ?></P>
                     <P>Giá: <?php echo $dong_spx['GIASANPHAM'] ?> đ</P>
                     <P>Chi tiết sản phẩm</P>
@@ -69,3 +70,4 @@
                 ?>
                 </ul>
             </div>
+    
