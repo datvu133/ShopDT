@@ -14,7 +14,7 @@
              while($dong_spm=mysqli_fetch_array($query_spm)){
                 ?>
             <li><a href="index.php?xem=chitietsanpham&idloaisp=<?php echo $dong_spm['MALOAISANPHAM'] ?>&idhangsx=<?php echo $dong_spm['MAHANGSANXUAT'] ?>&id= <?php echo $dong_spm['MASANPHAM'] ?>">
-                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spm['HINHURL'] ?>" alt="" width="150" height="150">
+                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spm['HINHURL'] ?>" alt="" width="auto" height="auto">
                     <P><?php echo $dong_spm['TENSANPHAM'] ?></P>
                     <P>Giá: <?php echo $dong_spm['GIASANPHAM'] ?> đ</P>
                     <P>Chi tiết sản phẩm</P>
@@ -36,7 +36,7 @@
              while($dong_spmn=mysqli_fetch_array($query_spmn)){
                 ?>
             <li><a href="index.php?xem=chitietsanpham&idloaisp=<?php echo $dong_spmn['MALOAISANPHAM'] ?>&idhangsx=<?php echo $dong_spmn['MAHANGSANXUAT'] ?>&id= <?php echo $dong_spmn['MASANPHAM'] ?>">
-                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spmn['HINHURL'] ?>" alt="" width="150" height="150">
+                    <img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spmn['HINHURL'] ?>" alt="" width="auto" height="auto">
                     <P><?php echo $dong_spmn['TENSANPHAM'] ?></P>
                     <P>Giá: <?php echo $dong_spmn['GIASANPHAM'] ?> đ</P>
                     <P>Chi tiết sản phẩm</P>
@@ -58,7 +58,7 @@
                 ?>
                 
             <li><a href="index.php?xem=chitietsanpham&idloaisp=<?php echo $dong_spx['MALOAISANPHAM'] ?>&idhangsx=<?php echo $dong_spx['MAHANGSANXUAT'] ?>&id= <?php echo $dong_spx['MASANPHAM'] ?>">
-                    <img id='status' src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spx['HINHURL'] ?>" alt="" width="150" height="150">
+                    <img id='status' src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong_spx['HINHURL'] ?>" alt="" width="auto" height="auto">
                     <P><?php echo $dong_spx['TENSANPHAM'] ?></P>
                     <P>Giá: <?php echo $dong_spx['GIASANPHAM'] ?> đ</P>
                     <P>Chi tiết sản phẩm</P>

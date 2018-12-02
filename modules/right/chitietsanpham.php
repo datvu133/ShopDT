@@ -19,7 +19,7 @@
        
     </tr>
     <tr>
-        <td rowspan="4"><img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong['HINHURL'] ?>" width="200" height="200"></td>
+        <td rowspan="4"><img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong['HINHURL'] ?>" width="auto" height="200"></td>
         <td  ><?php echo $dong['TENSANPHAM']?></td>
     </tr>
     <tr>

@@ -9,7 +9,6 @@
         order by NGAYLAP";
     $run_dh= mysqli_query($con,$sql_dh);
 ?>
-<form action="modules/quanlydonhang/xuly.php" method="get">
 <input type="hidden" value="sua" name="ac" />
 <table width="1000px" border="1">
      <tr>
@@ -29,7 +28,7 @@
      ?>
      <tr>
          <td> <?php echo $i;?></td>
-         <td><input type="text" name="id" value="<?php echo $dong_dh['MADONDATHANG'] ?>" disabled /> </td>
+         <td><?php echo $dong_dh['MADONDATHANG'] ?></td>
          <td><?php echo $dong_dh['TENHIENTHI'] ?></td>
          <td><?php echo $dong_dh['sosanpham'] ?></td>
          <td><?php echo $dong_dh['TONGTHANHTIEN'] ?></td>
@@ -38,28 +37,18 @@
             $sql_tt="select * from tinhtrang";
             $run_tt=mysqli_query($con,$sql_tt);
          ?>
-         <td><select name="idtt" value="<?php echo $dong_dh['MATINHTRANG'] ?>">
+         <td>
              <?php
              while($dong_tt=mysqli_fetch_array($run_tt)){
              if($dong_dh['MATINHTRANG']==$dong_tt['MATINHTRANG']){
-                 ?>
-            <option value="<?php echo $dong_tt['MATINHTRANG']?>" selected>
-            <?php echo $dong_tt['TENTINHTRANG'] ?>
-            <?php
-             } else {
-             ?>
-                <option value="<?php echo $dong_tt['MATINHTRANG']?>">
-            <?php echo $dong_tt['TENTINHTRANG'] ?>
-            <?php
+                 
+            echo $dong_tt['TENTINHTRANG'];
+            
              }
+            }
              ?>
-        </option>
-            <?php
-             }
-             ?>
-         </select>
          </td>
-         <td><button type="submit">Sửa</button></td>
+         <td><a href="index.php?quanly=quanlydonhang&ac=sua&id=<?php echo $dong_dh['MADONDATHANG'] ?>">Sửa</td>
          <td><a href="modules/quanlydonhang/xuly.php?ac=xoa&id=<?php echo $dong_dh['MADONDATHANG'] ?>">Xóa</a></td>
      </tr>
      <?php
@@ -67,4 +56,3 @@
             }
      ?>
 </table>
-</form>
