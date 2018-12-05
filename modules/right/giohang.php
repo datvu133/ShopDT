@@ -1,16 +1,8 @@
-<?php
-$cart="cart";
-$_SESSION['cart'] =$cart ;
-?>
+
 <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Giỏ Hàng</p>
 <h3>
     
     <?php 
-    
-    if(isset($_GET['ac']) && $_GET['ac']=='dathanhtoan' ){
-        unset($_SESSION['cart']);
-       
-    } 
     if(isset($_SESSION['username'])){
      $tentaikhoan=$_SESSION['username'];
     $sql_tk="select * from taikhoan where TENDANGNHAP='$tentaikhoan'";
@@ -44,6 +36,19 @@ $_SESSION['cart'] =$cart ;
        header('location:index.php?xem=giohang');
       
     }
+    if(isset($_GET['xoahet']))
+    {
+        foreach($_SESSION as $name => $value){
+            if($value>0){
+                $tongtien=0;
+                if(substr($name,0,5)=='cart_'){
+                    $id=substr($name,5,strlen($name)-5);
+        unset($_SESSION['cart_'.$id]);
+    }}}
+       header('location:index.php?xem=giohang');
+      
+    }
+
 
     $thanhtien=0;
     ?>
@@ -59,6 +64,9 @@ $_SESSION['cart'] =$cart ;
                 $sql="select * from sanpham where MASANPHAM='".$id."'";
                 $query=mysqli_query($con,$sql);
                 while($dong = mysqli_fetch_array($query)){
+                    if($value>=$dong['SOLUONGTON']){
+                        echo "<script>alert('Số lượng còn lại là:'".$dong['SOLUONGTON'].")</script>";
+                    }
                     $tongtien=$dong['GIASANPHAM']*$value;
                     ?>
                 <tr>
@@ -66,9 +74,11 @@ $_SESSION['cart'] =$cart ;
                 
                  <td ><?php echo $dong['TENSANPHAM']?></td>
                  <td ><input type="text" name = "soluong" value="<?php echo $value ?>" width="50" disabled></td>
-                <td ><a href="index.php?xem=giohang&them=<?php echo $id?>">[+]</a><a href="index.php?xem=giohang&tru=<?php echo $id?>">[-]</a><a href="index.php?xem=giohang&xoa=<?php echo $id?>">X</a></td>
+                <td ><a href="index.php?xem=giohang&them=<?php echo $id?>">[+]   </a><a href="index.php?xem=giohang&tru=<?php echo $id?>">[-]   </a><a href="index.php?xem=giohang&xoa=<?php echo $id?>">X</a></td>
                 <td ><p><?php echo $tongtien ?>VNĐ</p></td>
                 </tr>
+                <tr>
+                <td colspan="5" align="right"><a href="index.php?xem=giohang&xoahet">Xóa Tất Cả</a></td></tr>
                 <?php
                 }
             }

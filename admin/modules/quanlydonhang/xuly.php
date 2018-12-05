@@ -8,6 +8,7 @@
     $id=$_GET['id'];
     $idtt=$_POST['idtt'];
     echo $idtt;
+    echo $id;
     if(isset($_GET['ac']))
     {
         $tam=$_GET['ac'];
@@ -18,8 +19,7 @@
     
    if ($tam=='sua')
     {   
-        $idh=$_POST['MADONDATHANG'];
-        $sql="update dondathang set MATINHTRANG='$idtt' where MADONDATHANG='$idh'";
+        $sql="update dondathang set MATINHTRANG='$idtt' where MADONDATHANG='$id'";
         mysqli_query($con,$sql);
         header('location:../../index.php?quanly=quanlydonhang');
     }elseif ($tam=='xoa')

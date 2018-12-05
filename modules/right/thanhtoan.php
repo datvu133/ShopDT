@@ -42,7 +42,7 @@
     }
   
     echo "Bạn thanh toán !<br>"; 
-    echo '<a href="index.php">Quay lại mua hàng</a>';
+    echo '<a href="index.php?xem=giohang&xoahet">Quay lại mua hàng</a>';
   }
 }
 ?>

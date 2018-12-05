@@ -5,6 +5,10 @@
 a{
     text-decoration: none;
 }
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
 .wrapper{
     width: auto;
     height: auto;
@@ -102,7 +106,6 @@ a{
 }
 .right{
     width:83%;
-    
     float: right;
     margin-left: 10px;
 }

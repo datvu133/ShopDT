@@ -5,7 +5,7 @@
     $run= mysqli_query($con,$sql);
     $dong_dh=mysqli_fetch_array($run);
 ?>
-<form action="modules/quanlydonhang/xuly.php?id=<?php echo $dong_dh['MADONDATHANG'] ?>" method="post" enctype="multipart/form-data">
+<form action="modules/quanlydonhang/xuly.php?ac=sua&id=<?php echo $dong_dh['MADONDATHANG'] ?>" method="post" enctype="multipart/form-data">
 <table width ="300" border="1">
 <tr>
        

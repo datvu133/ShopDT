@@ -19,6 +19,10 @@
                 $tam=$_GET['xem'];
             }else
             $tam='';
+            if($tam=='dangnhap')
+            {
+                include('modules/left/thongtin.php');
+            }
             if($tam!='trangchu'&$tam!=''&$tam!='dangnhap'&$tam!='giohang'&$tam!='dangky')
             {
                 include('modules/left/danhsachsanpham.php');
@@ -35,6 +39,11 @@
                 $tam=$_GET['xem'];
             }else
             $tam='';
+            if(isset($_GET['ac']))
+            {
+                $ac=$_GET['ac'];
+            }else
+            $ac='';
             if($tam=='sanpham')
             {
                 if(isset($_POST['search']))
@@ -61,7 +70,17 @@
                 include('modules/right/thanhtoan.php');
             }else if($tam=='dangnhap')
             {
-                include('modules/right/dangnhap.php');
+
+                
+                if($ac=='lichsumuahang'){
+                    include('modules/right/lichsumuahang.php');
+                }elseif($ac=='chitietdonhang'){
+                    include('modules/right/chitietdonhang.php');
+                }elseif($ac=='sua'){
+                    include('modules/right/suathongtin.php');
+                }else{
+                    include('modules/right/dangnhap.php');
+                }
             }else if($tam=='dangky')
             {
                 include('modules/right/dangky.php');

@@ -14,10 +14,7 @@
 ?>
 <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Chi Tiết Sản Phẩm </p>
 <table width="750" stype="border-collapse:collapse">
-    <tr>
-        <td colspan="2"></td>
-       
-    </tr>
+ 
     <tr>
         <td rowspan="4"><img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong['HINHURL'] ?>" width="auto" height="200"></td>
         <td  ><?php echo $dong['TENSANPHAM']?></td>
@@ -41,7 +38,7 @@
     </td>
     </tr>
     <tr>
-        <td colspan="2">Thông số kỹ thuật: </td>
+        <td colspan="1">Thông số kỹ thuật: </td>
         
     </tr>
     <tr>
