@@ -201,12 +201,46 @@ table{
     padding: 0 0 0 0px;
     line-height: 40px;
     border-radius: 5px;
-    background: center #1D71AB;
+    background: center red;
     font-weight: 400;
     letter-spacing: 0.5px;
     background-size: 26px;
     display: inline-block;
     text-align: center;
+    margin-left: 10px;
+}
+.dangnhap {
+    width: 350px;
+    top: 10%;
+    margin-left: -175px;
+    font-size: 16px;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    padding-bottom: 0;
+    padding-top: 8px;
+    margin: auto -40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    padding: 4px 40px 30px;
+
+}
+.dangky {
+    font-size: 16px;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    padding-bottom: 0;
+    padding-top: 8px;
+    margin: auto -40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    width: 100%;
+    padding: 10px 40px 36px;
 }
 .gio {
     text-align: center;

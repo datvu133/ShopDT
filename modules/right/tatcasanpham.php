@@ -9,7 +9,7 @@
     }else{
         $trang=($get_trang*21)-21;
     }
-    $sql="select * from sanpham order by TENSANPHAM limit $trang,21";
+    $sql="select * from sanpham where SOLUONGTON >=1  order by TENSANPHAM limit $trang,21";
     $query=mysqli_query($con,$sql);
 ?>
     <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Tất cả sản phẩm</p>

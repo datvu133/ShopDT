@@ -3,4 +3,5 @@
     <li><a href="index.php?xem=dangnhap">Thông Tin Khách Hàng</a></li>
     <li><a href="index.php?xem=dangnhap&ac=lichsumuahang">Lịch Sử Mua Hàng</a></li>
     <li><a href="index.php?xem=dangnhap&ac=sua">Sửa Thông Tin Khách Hàng</a></li>
+    <li><a href="index.php?xem=dangnhap&ac=gio">Giỏ Hàng</a></li>
 </ul>

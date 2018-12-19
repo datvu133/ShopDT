@@ -30,8 +30,10 @@ if (isset($_POST["btn_submit"])) {
     }
 }
 ?>
+<p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Đăng Ký </p>
+<form action="" method="post" class="dangky">
 
-<form action="" method="post">
+
 <table>
   <tr>
       <td>Tài Khoản :</td>

@@ -88,3 +88,11 @@ table td{
     height: 80px;
     border: 1px solid #000;
 }
+.dangnhap{
+    width: 350px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -175px;
+
+}

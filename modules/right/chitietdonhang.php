@@ -1,6 +1,5 @@
 <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Chi Tiết đơn Hàng</p>
 <h3>
-    
     <?php 
     if(isset($_SESSION['username'])){
      $tentaikhoan=$_SESSION['username'];
@@ -17,7 +16,6 @@
      where ddh.MADONDATHANG='$iddh'";
     $run_dh=mysqli_query($con,$sql_dh);
     ?>
-
 <table width="1000px" border="1">
      <tr>
          <td>STT</td>
@@ -42,10 +40,9 @@
          <td><?php echo $dong_dh['GIABAN'] ?></td>
          <td><?php echo $dong_dh['NGAYLAP'] ?></td>
          <td><?php echo $dong_dh['TENTINHTRANG'] ?></td>
-      
      </tr>
      <?php
      $i++;
-            }
+        }
      ?>
 </table>

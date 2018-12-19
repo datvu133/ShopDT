@@ -25,9 +25,14 @@
          </td>
      </tr>
      <tr>
+        <td>Số lượng:</td>
+       <td> <input type="text" name="sl"></td>
+     </tr>
+     <tr>
          <td>Mô tả</td>
          <td><textarea name="motasp" id="" cols="30" rows="15"></textarea> </td>
      </tr>
+     
      <tr>
          <?php
             $sql_lsp="select * from loaisanpham";

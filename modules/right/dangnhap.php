@@ -34,7 +34,7 @@
 	$sdt=$dongtk['DIENTHOAI'];
 	?>
 	<P>Thông tin khách hàng</P>
-	<table>
+	<table class="dangnhap">
 	<tr>
 	<td>Tên Khách hàng:</td>
 	<td><?php echo $tentk?></td>
@@ -52,21 +52,23 @@
 	<td><?php echo $email ?></td>
 	</tr>
 	</table>
-    <a href="index.php?&ac=dangxuat"><button>Đăng xuất</button></a>
+    <P><a href="index.php?&ac=dangxuat"><button>Đăng xuất</button></a></P>
     <?php
 }else{
     ?>
-	<div claas="dangnhap">
+	<p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Đăng Nhập </p> <br>
+
+	<div class="dangnhap">
 <form method="POST">
-	<fieldset>
+
 	    <legend>Đăng nhập</legend>
 	    	<table>
 	    		<tr>
-	    			<td>Username</td>
+	    			<td>Username: </td>
 	    			<td><input type="text" name="username" size="30"></td>
 	    		</tr>
 	    		<tr>
-	    			<td>Password</td>
+	    			<td>Password: </td>
 	    			<td><input type="password" name="password" size="30"></td>
 	    		</tr>
 	    		<tr>
@@ -74,7 +76,7 @@
 	    		</tr>
 	    	</table>
 			<p>Bạn chưa có tài khoản <a href="index.php?xem=dangky"> tạo tài khoản mới</a></p>
-  </fieldset>
+
   
   </form>
 

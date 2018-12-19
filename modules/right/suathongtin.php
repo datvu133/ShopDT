@@ -33,10 +33,8 @@ if (isset($_POST["btn_submit"])) {
 }
 ?>
 
-<form action="" method="post">
+<form action="" method="post" class ="dangky">
 <table>
- 
-  
   <tr>
       <td>Họ Và Tên:</td>
       <td><input type="text" id="name" name="name"></td>

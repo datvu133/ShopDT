@@ -21,7 +21,8 @@
         }
     }
 ?>
-<form method="post" >
+
+<form method="post" class="dangnhap" >
 <center><table width="300" border="1" style="text-align:center">
     <tr>
         <td colsapn="2">Đăng nhập</td>

@@ -11,13 +11,15 @@
     $gia=$_POST['gia'];
     $idloai=$_POST['loaisp'];
     $mota=$_POST['motasp'];
+    $sl=$_POST['sl'];
     $hinhanh=$_FILES['hinhanh']['name'];
     $hinh_tmp=$_FILES['hinhanh']['tmp_name'];
     move_uploaded_file($hinh_tmp,'uploads/'.$hinhanh);
 
     if(isset($_POST['them']))
     {
-        $sql="insert into sanpham (MAHANGSANXUAT,MALOAISANPHAM,TENSANPHAM,HINHURL,NGAYNHAP,GIASANPHAM,MOTA) VALUES ($idhang,$idloai,'$tensp','$hinhanh',CURRENT_TIMESTAMP(),$gia,'$mota')";
+        
+        $sql="insert into sanpham (MAHANGSANXUAT,MALOAISANPHAM,TENSANPHAM,HINHURL,NGAYNHAP,GIASANPHAM,SOLUONGTON,MOTA) VALUES ($idhang,$idloai,'$tensp','$hinhanh',CURRENT_TIMESTAMP(),$gia,$sl,'$mota')";
         mysqli_query($con,$sql);
        header('location:../../index.php?quanly=quanlychitietsanpham&ac=them');
     }

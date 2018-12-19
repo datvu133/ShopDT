@@ -1,9 +1,9 @@
 <?php
-    $sql_spm="select * from sanpham order by NGAYNHAP desc limit 0,10";
+    $sql_spm="select * from sanpham where SOLUONGTON >=1 order by NGAYNHAP desc limit 0,10";
     $query_spm=mysqli_query($con,$sql_spm);
-    $sql_spmn="select * from sanpham order by SOLUONGBAN desc limit 0,10";
+    $sql_spmn="select * from sanpham where SOLUONGTON >=1 order by SOLUONGBAN desc limit 0,10";
     $query_spmn=mysqli_query($con,$sql_spmn);
-    $sql_spx="select * from sanpham order by SOLUONGXEM desc limit 0,10";
+    $sql_spx="select * from sanpham where SOLUONGTON >=1 order by SOLUONGXEM desc limit 0,10";
     $query_spx=mysqli_query($con,$sql_spx);
 ?>
 <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 5px;">Sản phẩm mới</p>

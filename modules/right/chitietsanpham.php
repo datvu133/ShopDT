@@ -3,9 +3,9 @@
         $sql="select * from sanpham sp JOIN loaisanpham lsp on sp.MALOAISANPHAM=lsp.MALOAISANPHAM JOIN hangsanxuat hsx on sp.MAHANGSANXUAT=hsx.MAHANGSANXUAT where MASANPHAM=$_GET[id]";
         $query=mysqli_query($con,$sql);
         $dong=mysqli_fetch_array($query);
-        $sql_lsp="select * from sanpham where MALOAISANPHAM=$_GET[idloaisp] and MASANPHAM<>$_GET[id] limit 0,5";
+        $sql_lsp="select * from sanpham where SOLUONGTON >=1 and MALOAISANPHAM=$_GET[idloaisp] and MASANPHAM<>$_GET[id] limit 0,5";
         $query_lsp=mysqli_query($con,$sql_lsp);
-        $sql_hsx="select * from sanpham where MAHANGSANXUAT=$_GET[idhangsx] and MASANPHAM<>$_GET[id] limit 0,5";
+        $sql_hsx="select * from sanpham where SOLUONGTON >=1 and MAHANGSANXUAT=$_GET[idhangsx] and MASANPHAM<>$_GET[id] limit 0,5";
         $query_hsx=mysqli_query($con,$sql_hsx);
         $i=1;
         $dem=$dong['SOLUONGXEM']+$i;
@@ -14,7 +14,6 @@
 ?>
 <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Chi Tiết Sản Phẩm </p>
 <table width="750" stype="border-collapse:collapse">
- 
     <tr>
         <td rowspan="4"><img src="admin/modules/quanlychitietsanpham/uploads/<?php echo $dong['HINHURL'] ?>" width="auto" height="200"></td>
         <td  ><?php echo $dong['TENSANPHAM']?></td>
@@ -26,15 +25,16 @@
     <td>Hãng sản xuất:<?php echo $dong['TENHANGSANXUAT']?></td>
     </tr>
     <tr>
-    
         <td style="color:red ;width:200">Giá:<?php echo ''. $dong['GIASANPHAM']?>VNĐ</td>
- 
     </tr>
     <tr>
     <td> <img src="imags/eye.png" alt="">:<?php echo $dem ?>
     <img src="imags/gio.jpg" alt="" width="30" height="30"> :<?php echo $dong['SOLUONGBAN']?></td>
-    <td colspan="4">
+    <td colspan="2">
     <a href="index.php?xem=giohang&add=<?php echo $dong['MASANPHAM']?>"><button class ="button"> Thêm vào giỏ hàng </button></a>
+    </td>
+    <td colspan="2">
+    <a href="index.php?xem=muangay&id=<?php echo $dong['MASANPHAM']?>"><button class ="buttongio"> Mua Ngay </button></a>
     </td>
     </tr>
     <tr>
@@ -42,10 +42,8 @@
         
     </tr>
     <tr>
-        <td colspam="2" style="width:200" > <?php echo $dong['MOTA']?></td>
-        
+        <td colspam="2" style="width:200" > <?php echo $dong['MOTA']?></td>  
     </tr>
-    
 </table>
 <hr>
 <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 5px;">Sản phẩm cùng loại</p>
@@ -60,7 +58,6 @@
                         <P><?php echo $dong_lsp['TENSANPHAM'] ?></P>
                         <P>Giá: <?php echo $dong_lsp['GIASANPHAM'] ?> đ</P>
                         <P>Chi tiết sản phẩm</P>
-
                     </a></li>
                     <?php
                   

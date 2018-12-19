@@ -1,6 +1,6 @@
 <?php
      
-    $sql_sp="select * from sanpham where MAHANGSANXUAT=$_GET[id]";
+    $sql_sp="select * from sanpham where SOLUONGTON >=1 and MAHANGSANXUAT=$_GET[id]";
     $query_sp=mysqli_query($con,$sql_sp);
     $sql_hsx="select * from hangsanxuat where MAHANGSANXUAT=$_GET[id]";
     $query_hsx=mysqli_query($con,$sql_hsx);
@@ -17,7 +17,6 @@
                         <P><?php echo $dong_sp['TENSANPHAM'] ?></P>
                         <P>Giá: <?php echo $dong_sp['GIASANPHAM'] ?> đ</P>
                         <P>Chi tiết sản phẩm</P>
-
                     </a></li>
                     <?php
                     }
