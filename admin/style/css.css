@@ -13,6 +13,9 @@ table td{
     width: auto;
     height: auto;
 }
+table tr:hover{
+    background-color:#ddd;
+}
 .wrapper{
     width: auto;
     height: auto;

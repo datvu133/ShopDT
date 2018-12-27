@@ -15,14 +15,14 @@
 
 <table width="1000px" border="1" >
      <tr>
-         <td style="width:10px">ID</td>
-         <td style="width:30px">Tên</td>
-         <td style="width:60px">Hình ảnh</td>
-         <td style="width:30px">Giá</td>
-         <td style="width:40px">Mô tả</td>
-         <td style="width:30px">Loại</td>
-         <td style="width:30px">Hãng</td>
-         <td colspan="2" style="width:30px">Quản lý</td>
+         <th style="width:10px">ID</th>
+         <th style="width:30px">Tên</th>
+         <th style="width:60px">Hình ảnh</th>
+         <th style="width:30px">Giá</th>
+         <th style="width:40px">Mô tả</th>
+         <th style="width:30px">Loại</th>
+         <th style="width:30px">Hãng</th>
+         <th colspan="2" style="width:30px">Quản lý</th>
      </tr>
      <?php
          $i=1;

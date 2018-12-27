@@ -8,7 +8,7 @@
     $runtk=mysqli_query($con,$sql_tk);
     $dongtk=mysqli_fetch_array($runtk);
     $tentk=$dongtk['TENHIENTHI'];
-     echo "Xin Chào:".$tentk;
+
      $matk=$dongtk['MATAIKHOAN'];
     ?>
     </h3>

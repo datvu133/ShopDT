@@ -8,7 +8,7 @@
     $runtk=mysqli_query($con,$sql_tk);
     $dongtk=mysqli_fetch_array($runtk);
     $tentk=$dongtk['TENHIENTHI'];
-     echo "Xin Chào:".$tentk;
+ 
     
     $matk=$dongtk['MATAIKHOAN'];
     $sql_dh="select *,COUNT( ctddh.MASANPHAM) as sosanpham from dondathang ddh join chitietdondathang ctddh on ddh.MADONDATHANG=ctddh.MADONDATHANG join taikhoan tk on ddh.MATAIKHOAN=tk.MATAIKHOAN join tinhtrang tt on ddh.MATINHTRANG=tt.MATINHTRANG 

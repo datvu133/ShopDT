@@ -9,6 +9,9 @@ table{
     border-collapse: collapse;
     text-align: center;
 }
+table tr:hover{
+    background-color:#ddd;
+}
 .wrapper{
     width: auto;
     height: auto;
@@ -116,7 +119,7 @@ table{
 .sanpham
 {
     width:  100%;
-    height: 300px;
+    height: 300zpx;
 } 
 
 .sanpham ul{
@@ -128,6 +131,7 @@ table{
 }
 .sanpham ul li{
     width: 350px;
+    height: 300px;
     text-align: center;
     float: left;
     margin-left: 20px;
@@ -145,8 +149,6 @@ table{
     -webkit-transform: scaleX(1.05);
     transform: scaleX(1.05);
 }
-
-
 .clear{
     margin-top: 4px;
     clear: both;
@@ -162,13 +164,47 @@ table{
 .info {
     line-height: 12px;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 .search{
-    margin-top: 10px;
+    margin-top: 5px;
     float: right;
     height: auto;
     line-height: 20px;
     margin-right: 20px;
+    margin-bottom: 10px;
+}
+.searchbutton{
+    width: auto;
+    height: auto;
+    margin-top: 5px;
+    float: right;
+   margin-left: 5px;
+}
+input[id="textsearch"] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline:none;
+    padding: 6px 10px;
+  }
+input[id="textsearch"]:focus{
+    width:300px; 
+}
+input[id="textsearch"] {
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline:none;
+    padding: 6px 10px;
+
+    transition:0.6s ease-in-out;
+  }
+input[id="textsearch"]:focus{
+    width:300px; 
+    background-color:#f7f7f7;
 }
 .button{
     width: 186px;

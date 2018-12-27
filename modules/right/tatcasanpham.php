@@ -9,7 +9,7 @@
     }else{
         $trang=($get_trang*21)-21;
     }
-    $sql="select * from sanpham where SOLUONGTON >=1  order by TENSANPHAM limit $trang,21";
+    $sql="select * from sanpham where SOLUONGTON >=1  order by TENSANPHAM limit $trang,15";
     $query=mysqli_query($con,$sql);
 ?>
     <p style="text-align:left;color:red; background:#1B0301;padding:10px; margin-top: 2px;">Tất cả sản phẩm</p>
@@ -51,7 +51,7 @@
     <?php
         $sql_trang=mysqli_query($con,"select * from sanpham");
         $count=mysqli_num_rows($sql_trang);
-        $a=ceil($count/21);
+        $a=ceil($count/15);
         for($i=1;$i<=$a;$i++){    
     ?>
                 <button> <?php echo '<a href="?xem=sanpham&trang='.$i.'"style=text-decoration:none;">'.' '.$i.' '.'</a>'; ?> </button>

@@ -63,6 +63,9 @@ if (isset($_POST["btn_submit"])) {
       <td>Email :</td>
       <td><input type="text" id="email" name="email"></td>
   </tr>
+  
+ 
+  
   <tr>
       <td colspan="2" align="center"><input type="submit" name="btn_submit" value="Đăng ký"></td>
   </tr>
